@@ -1,0 +1,14 @@
+def fibonacci_iterative(n):
+    if n <= 1:
+        return n
+
+    prev, curr = 0, 1
+    for _ in range(2, n + 1):
+        next_num = prev + curr
+        prev, curr = curr, next_num
+    return curr
+
+
+# Пример вывода первых 100 элементов последовательности
+for i in range(100):
+    print(f"F({i}) = {fibonacci_iterative(i)}")
